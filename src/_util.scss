@@ -1,0 +1,21 @@
+$background-color: #000000;
+$light-side-color: #1612f7;
+$dark-side-color : #d11313;
+$font-color      : #ffe81f;
+
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+
+@mixin glow-edge($main-color) {
+    -webkit-border-radius: 10px;
+    -moz-border-radius   : 10px;
+    border-radius        : 10px;
+    -webkit-box-shadow   : 0px 0px 30px 0px $main-color;
+    -moz-box-shadow      : 0px 0px 30px 0px $main-color;
+    box-shadow           : 0px 0px 30px 0px $main-color;
+}
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform    : $property;
+    transform        : $property;
+}

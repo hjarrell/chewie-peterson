@@ -1,0 +1,47 @@
+@use 'util';
+
+.space-particles {
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.choice-btn-img {
+  width: 200px;
+  height: 200px;
+}
+
+.btn-light-side {
+  &:hover{
+    @include util.transform(scale(1.2))
+  }
+}
+
+.btn-dark-side {
+  &:hover{
+    @include util.transform(scale(1.2))
+  }
+}
+
+.dark-hover {
+  @include util.glow-edge(util.$dark-side-color);
+}
+
+.light-hover {
+  @include util.glow-edge(util.$light-side-color);
+}
+
+.choice-text {
+  color: util.$font-color;
+}
+
+.choice-title {
+  color: util.$font-color;
+}
+
+.image-grid-row {
+  margin-bottom: 15px;
+}
